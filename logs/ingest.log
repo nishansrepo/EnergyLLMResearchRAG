@@ -1,0 +1,101 @@
+2026-03-01 15:20:26,671 [INFO] --force flag set. Rebuilding indices from scratch.
+2026-03-01 15:20:26,675 [INFO] Loaded manifest with 17 sources.
+2026-03-01 15:20:29,634 [INFO] Use pytorch device_name: mps
+2026-03-01 15:20:29,634 [INFO] Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2026-03-01 15:20:31,038 [INFO] Processing 2025Antonesi_Review...
+2026-03-01 15:20:33,517 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-01 15:20:33,536 [INFO]   Found 7 headers.
+2026-03-01 15:20:34,555 [INFO]   Generated 188 chunks.
+2026-03-01 15:20:34,557 [INFO] Processing 2025Madani_LLMSG...
+2026-03-01 15:20:41,192 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-01 15:20:41,197 [INFO]   Found 36 headers.
+2026-03-01 15:20:42,217 [INFO]   Generated 193 chunks.
+2026-03-01 15:20:42,219 [INFO] Processing 2025Takrouri_KDHEM...
+2026-03-01 15:20:45,292 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-01 15:20:45,296 [INFO]   Found 17 headers.
+2026-03-01 15:20:46,311 [INFO]   Generated 131 chunks.
+2026-03-01 15:20:46,312 [INFO] Processing 2025Mirshekali_EnergySysReview...
+2026-03-01 15:20:53,104 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-01 15:20:53,109 [INFO]   Found 51 headers.
+2026-03-01 15:20:54,128 [INFO]   Generated 191 chunks.
+2026-03-01 15:20:54,128 [INFO] Processing 2025Ravichandran_ExpPowerGrids...
+2026-03-01 15:20:57,068 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-01 15:20:57,072 [INFO]   Found 26 headers.
+2026-03-01 15:20:58,088 [INFO]   Generated 153 chunks.
+2026-03-01 15:20:58,089 [INFO] Processing 2025Yang_RL2EM...
+2026-03-01 15:20:58,326 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 429 Too Many Requests"
+2026-03-01 15:20:58,327 [INFO] Retrying request to /v1/messages in 24.000000 seconds
+2026-03-01 15:21:24,415 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-01 15:21:24,418 [INFO]   Found 15 headers.
+2026-03-01 15:21:25,432 [INFO]   Generated 93 chunks.
+2026-03-01 15:21:25,434 [INFO] Processing 2025Zhang_GridAgent...
+2026-03-01 15:21:25,942 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 429 Too Many Requests"
+2026-03-01 15:21:25,944 [INFO] Retrying request to /v1/messages in 15.000000 seconds
+2026-03-01 15:21:44,478 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-01 15:21:44,483 [INFO]   Found 25 headers.
+2026-03-01 15:21:45,496 [INFO]   Generated 65 chunks.
+2026-03-01 15:21:45,498 [INFO] Processing 2025Xiang_LLMSecOp...
+2026-03-01 15:21:47,550 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-01 15:21:47,554 [INFO]   Found 12 headers.
+2026-03-01 15:21:48,567 [INFO]   Generated 81 chunks.
+2026-03-01 15:21:48,569 [INFO] Processing 2025Li_RisksSG...
+2026-03-01 15:21:49,394 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 429 Too Many Requests"
+2026-03-01 15:21:49,396 [INFO] Retrying request to /v1/messages in 22.000000 seconds
+2026-03-01 15:22:14,902 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-01 15:22:14,906 [INFO]   Found 18 headers.
+2026-03-01 15:22:15,917 [INFO]   Generated 51 chunks.
+2026-03-01 15:22:15,920 [INFO] Processing 2025Sarwar_LitSurvey...
+2026-03-01 15:22:18,577 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-01 15:22:18,581 [INFO]   Found 16 headers.
+2026-03-01 15:22:19,592 [INFO]   Generated 56 chunks.
+2026-03-01 15:22:19,594 [INFO] Processing 2026Chebbi_EnergyGPT...
+2026-03-01 15:22:20,362 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 429 Too Many Requests"
+2026-03-01 15:22:20,364 [INFO] Retrying request to /v1/messages in 21.000000 seconds
+2026-03-01 15:22:45,610 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-01 15:22:45,615 [INFO]   Found 31 headers.
+2026-03-01 15:22:46,643 [INFO]   Generated 316 chunks.
+2026-03-01 15:22:46,645 [INFO] Processing 2023Huang_FoundationalModels...
+2026-03-01 15:22:47,042 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 429 Too Many Requests"
+2026-03-01 15:22:47,044 [INFO] Retrying request to /v1/messages in 11.000000 seconds
+2026-03-01 15:23:00,266 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-01 15:23:00,269 [INFO]   Found 11 headers.
+2026-03-01 15:23:01,280 [INFO]   Generated 66 chunks.
+2026-03-01 15:23:01,282 [INFO] Processing 2024Cheng_GAIA...
+2026-03-01 15:23:01,607 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 429 Too Many Requests"
+2026-03-01 15:23:01,610 [INFO] Retrying request to /v1/messages in 15.000000 seconds
+2026-03-01 15:23:20,221 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-01 15:23:20,226 [INFO]   Found 29 headers.
+2026-03-01 15:23:21,245 [INFO]   Generated 89 chunks.
+2026-03-01 15:23:21,247 [INFO] Processing 2024Jia_DalineSimulation...
+2026-03-01 15:23:21,703 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 429 Too Many Requests"
+2026-03-01 15:23:21,705 [INFO] Retrying request to /v1/messages in 9.000000 seconds
+2026-03-01 15:23:32,613 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-01 15:23:32,616 [INFO]   Found 10 headers.
+2026-03-01 15:23:33,625 [INFO]   Generated 39 chunks.
+2026-03-01 15:23:33,627 [INFO] Processing 2026Bernier_PowerGraph...
+2026-03-01 15:23:33,859 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 429 Too Many Requests"
+2026-03-01 15:23:33,861 [INFO] Retrying request to /v1/messages in 5.000000 seconds
+2026-03-01 15:23:40,417 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-01 15:23:40,421 [INFO]   Found 8 headers.
+2026-03-01 15:23:41,430 [INFO]   Generated 30 chunks.
+2026-03-01 15:23:41,433 [INFO] Processing 2023Bai_DemandLSTM...
+2026-03-01 15:23:41,633 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 429 Too Many Requests"
+2026-03-01 15:23:41,634 [INFO] Retrying request to /v1/messages in 6.000000 seconds
+2026-03-01 15:23:49,302 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-01 15:23:49,306 [INFO]   Found 9 headers.
+2026-03-01 15:23:50,315 [INFO]   Generated 39 chunks.
+2026-03-01 15:23:50,317 [INFO] Processing 2024Jing_FaultDiagnosis...
+2026-03-01 15:23:50,584 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 429 Too Many Requests"
+2026-03-01 15:23:50,586 [INFO] Retrying request to /v1/messages in 7.000000 seconds
+2026-03-01 15:23:59,803 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-01 15:23:59,807 [INFO]   Found 18 headers.
+2026-03-01 15:24:00,817 [INFO]   Generated 41 chunks.
+2026-03-01 15:24:00,818 [INFO] 
+Total section-aware chunks across corpus: 1822
+2026-03-01 15:24:00,818 [INFO] Building FAISS index (this may take a minute)...
+2026-03-01 15:24:07,504 [INFO] Loading faiss.
+2026-03-01 15:24:07,657 [INFO] Successfully loaded faiss.
+2026-03-01 15:24:07,691 [INFO] FAISS index saved → data/processed/faiss_index
+2026-03-01 15:24:07,692 [INFO] BM25 corpus saved (1822 chunks) → data/processed/bm25_corpus.pkl
+2026-03-01 15:24:07,693 [INFO] Ingestion log saved → logs/ingest_log.json
+2026-03-01 15:24:07,693 [INFO] Ingestion complete.

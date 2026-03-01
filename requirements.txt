@@ -1,9 +1,37 @@
-langchain
-langchain-community
-langchain-huggingface
-langchain-anthropic
-faiss-cpu
-sentence-transformers
-pandas
-pymupdf
-pydantic
+# ============================================================================
+# Energy Sector Research Assistant — Pinned Dependencies
+# Python 3.10+ required
+# ============================================================================
+
+# --- Core LLM & Retrieval ---
+langchain>=0.3.0,<0.4
+langchain-community>=0.3.0,<0.4
+langchain-core>=0.3.0,<0.4
+langchain-anthropic>=0.3.0,<0.4
+langchain-huggingface>=0.1.0,<0.2
+langchain-text-splitters>=0.3.0,<0.4
+
+# --- Anthropic SDK ---
+anthropic>=0.40.0,<1.0
+
+# --- Embeddings & Reranking ---
+sentence-transformers>=3.0.0,<4.0
+faiss-cpu>=1.8.0,<2.0
+rank-bm25>=0.2.2,<0.3
+
+# --- PDF Processing ---
+pymupdf>=1.24.0,<2.0
+
+# --- Data & Config ---
+pandas>=2.1.0,<3.0
+pydantic>=2.5.0,<3.0
+python-dotenv>=1.0.0,<2.0
+
+# --- Resilience ---
+tenacity>=8.2.0,<10.0
+
+# --- App (Phase 3) ---
+streamlit>=1.38.0,<2.0
+
+# --- Evaluation ---
+# ragas>=0.1.0  # uncomment if using RAGAS metrics

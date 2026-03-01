@@ -1,0 +1,87 @@
+[
+  {
+    "source_id": "2025Antonesi_Review",
+    "headers_found": 7,
+    "chunks_created": 188
+  },
+  {
+    "source_id": "2025Madani_LLMSG",
+    "headers_found": 36,
+    "chunks_created": 193
+  },
+  {
+    "source_id": "2025Takrouri_KDHEM",
+    "headers_found": 17,
+    "chunks_created": 131
+  },
+  {
+    "source_id": "2025Mirshekali_EnergySysReview",
+    "headers_found": 51,
+    "chunks_created": 191
+  },
+  {
+    "source_id": "2025Ravichandran_ExpPowerGrids",
+    "headers_found": 26,
+    "chunks_created": 153
+  },
+  {
+    "source_id": "2025Yang_RL2EM",
+    "headers_found": 15,
+    "chunks_created": 93
+  },
+  {
+    "source_id": "2025Zhang_GridAgent",
+    "headers_found": 25,
+    "chunks_created": 65
+  },
+  {
+    "source_id": "2025Xiang_LLMSecOp",
+    "headers_found": 12,
+    "chunks_created": 81
+  },
+  {
+    "source_id": "2025Li_RisksSG",
+    "headers_found": 18,
+    "chunks_created": 51
+  },
+  {
+    "source_id": "2025Sarwar_LitSurvey",
+    "headers_found": 16,
+    "chunks_created": 56
+  },
+  {
+    "source_id": "2026Chebbi_EnergyGPT",
+    "headers_found": 31,
+    "chunks_created": 316
+  },
+  {
+    "source_id": "2023Huang_FoundationalModels",
+    "headers_found": 11,
+    "chunks_created": 66
+  },
+  {
+    "source_id": "2024Cheng_GAIA",
+    "headers_found": 29,
+    "chunks_created": 89
+  },
+  {
+    "source_id": "2024Jia_DalineSimulation",
+    "headers_found": 10,
+    "chunks_created": 39
+  },
+  {
+    "source_id": "2026Bernier_PowerGraph",
+    "headers_found": 8,
+    "chunks_created": 30
+  },
+  {
+    "source_id": "2023Bai_DemandLSTM",
+    "headers_found": 9,
+    "chunks_created": 39
+  },
+  {
+    "source_id": "2024Jing_FaultDiagnosis",
+    "headers_found": 18,
+    "chunks_created": 41
+  }
+]

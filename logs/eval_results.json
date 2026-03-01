@@ -1,0 +1,488 @@
+{
+  "summary": {
+    "run_timestamp": "2026-03-01T16:10:50.402977",
+    "total_queries": 20,
+    "successful": 20,
+    "failed": 0,
+    "categories": {
+      "direct": 10,
+      "synthesis": 5,
+      "edge_case": 5
+    },
+    "trust_behavior": {
+      "edge_case_abstention_rate_baseline": 1.0,
+      "edge_case_abstention_rate_enhanced": 1.0
+    },
+    "note": "Groundedness/Citation/Usefulness scores require manual review. See report/phase2_report.pdf for scored rubric."
+  },
+  "results": [
+    {
+      "query_id": "D01",
+      "category": "direct",
+      "query": "What are the two major types of attacks identified for large language models applied in smart grids, and how are they validated?",
+      "status": "OK",
+      "baseline_output": "I cannot find evidence for this claim in the provided context.\n\nWhile the context chunks reference a paper titled \"Risks of Practicing Large Language Models in Smart Grid: Threat Modeling and Validation\" by Li, Yang, and Sun (2025), the actual content describing the two major types of attacks and their validation methods is not included in the provided chunks.\n\nThe chunks only show:\n- The paper's title and authors in the front matter\n- References to the paper in bibliographies\n- A general statement that \"AI technologies are susceptible to various types of attacks\"\n\nTo answer your question accurately, I would need access to the full content of the Li et al. (2025) paper, particularly the sections detailing the threat modeling and validation methodology.",
+      "enhanced_output": "| Claim / Information | Supporting Text Snippet | Chunk ID |\n|---|---|---|\n| Two major types of attacks identified | \"identified two major types of attacks relevant to potential smart grid LLM applications, presenting the corresponding threat models. We validated these attacks using popular LLMs and real smart grid data.\" | [2025Li_RisksSG_chunk_1] |\n| Attack Type 1: Bad Data Injection | \"two major types of attacks concerning data security\u2014bad data injection\u2014and data privacy\u2014domain knowledge extraction\" | [2025Li_RisksSG_chunk_38] |\n| Attack Type 2: Domain Knowledge Extraction | \"two major types of attacks concerning data security\u2014bad data injection\u2014and data privacy\u2014domain knowledge extraction\" | [2025Li_RisksSG_chunk_38] |\n| Validation Approach | \"we validate the two types of attacks\u2014bad data injection and domain knowledge extraction\u2014by simulating scenarios involving LLM applications in a smart grid context\" | [2025Li_RisksSG_chunk_21] |\n| Models Used for Validation | \"We selected the proprietary models OpenAI GPT-3.5, GPT-4 and Google Gemini 2.0, as well as the open-source model Meta LLaMA-3 and DeepSeek-V3, for our study due to their popularity and extensive coverage in related research\" | [2025Li_RisksSG_chunk_21] |\n| Validation Results | \"Our validation results demonstrate that, under the practical threat models proposed in this paper, attackers can successfully execute both types of attacks on potential smart grid LLM applications.\" | [2025Li_RisksSG_chunk_21] |",
+      "baseline_abstained": true,
+      "enhanced_abstained": false,
+      "baseline_chunk_ids": [
+        "2025Li_RisksSG_chunk_0",
+        "2025Madani_LLMSG_chunk_158",
+        "2024Jing_FaultDiagnosis_chunk_32",
+        "2025Madani_LLMSG_chunk_167"
+      ],
+      "enhanced_chunk_ids": [
+        "2025Li_RisksSG_chunk_38",
+        "2025Li_RisksSG_chunk_1",
+        "2025Li_RisksSG_chunk_21",
+        "2025Li_RisksSG_chunk_5"
+      ],
+      "timestamp": "2026-03-01T16:11:00.369660"
+    },
+    {
+      "query_id": "D02",
+      "category": "direct",
+      "query": "What specific tasks in power dispatch does the GAIA Large Language Model address, and how was its training dataset constructed to handle these tasks?",
+      "status": "OK",
+      "baseline_output": "# GAIA Large Language Model: Tasks and Training Dataset Construction\n\n| Claim / Information | Supporting Text Snippet | Chunk ID |\n|---|---|---|\n| **Specific Power Dispatch Tasks Addressed** | \"These tasks include voltage boundary issues, output adjustments, generation cost calculations, and the start-up sequence of generators and buses.\" | [2024Cheng_GAIA_chunk_59] |\n| **Purpose of Task Design** | \"The design of these tasks aims to enable the LLM to make accurate judgments and effective decisions for specific operating situations during actual dispatching processes.\" | [2024Cheng_GAIA_chunk_59] |\n| **Training Dataset Composition Approach** | \"The composition of the training data considers both the depth and breadth of power knowledge and the complexity of actual power-dispatching operations.\" | [2024Cheng_GAIA_chunk_59] |\n| **Dataset Construction Technique** | \"We have developed a novel dataset construction technique that harnesses a range of data sources to fine-tune GAIA\" | [2024Cheng_GAIA_chunk_1] |\n| **Fine-tuning Method Used** | \"LoRA emerges as the preferred method due to its strategic use of low-rank matrices that adjust the weights of pre-trained models. This approach drastically cuts the number of trainable parameters while preserving the model's flexibility and expressiveness.\" | [2024Cheng_GAIA_chunk_60] |\n| **Model Sizes Fine-tuned** | \"During the fine-tuning stage, we fine-tune three GAIA models with varying parameter sizes: 7b, 13b, and 70b.\" | [2024Cheng_GAIA_chunk_60] |\n\nThe context indicates that GAIA was designed to handle multiple specific operational tasks while balancing both theoretical power system knowledge and practical operational complexity, though the exact details of the \"range of data sources\" used in the dataset construction technique are not elaborated in the provided chunks.",
+      "enhanced_output": "# GAIA Large Language Model: Tasks and Training Dataset Construction\n\n| Claim / Information | Supporting Text Snippet | Chunk ID |\n|---|---|---|\n| **Specific Power Dispatch Tasks Addressed** | \"These tasks include voltage boundary issues, output adjustments, generation cost calculations, and the start-up sequence of generators and buses.\" | [2024Cheng_GAIA_chunk_59] |\n| Task Design Purpose | \"The design of these tasks aims to enable the LLM to make accurate judgments and effective decisions for specific operating situations during actual dispatching processes.\" | [2024Cheng_GAIA_chunk_59] |\n| **Training Dataset Size** | \"The training dataset contains a total of 160,000 fine-tuning data, consisting of two main parts: power knowledge and power dispatch data.\" | [2024Cheng_GAIA_chunk_56] |\n| **Dataset Composition Breakdown** | \"Power knowledge data accounts for 15% and power dispatch data accounts for 85%.\" | [2024Cheng_GAIA_chunk_56] |\n| **Power Knowledge Data Sources** | \"The power system knowledge data comes from textbooks, academic papers, and industry regulations in the power system domain. These data are sourced from high-quality online resources such as Wikipedia, arXiv, and IEEE.\" | [2024Cheng_GAIA_chunk_56] |\n| **Knowledge Data Types** | \"These tasks include multiple-choice, single-choice\" questions | [2024Cheng_GAIA_chunk_56] |\n| **Training Data Characteristics** | \"The composition of the training data considers both the depth and breadth of power knowledge and the complexity of actual power-dispatching operations.\" | [2024Cheng_GAIA_chunk_59] |",
+      "baseline_abstained": false,
+      "enhanced_abstained": false,
+      "baseline_chunk_ids": [
+        "2024Cheng_GAIA_chunk_59",
+        "2024Cheng_GAIA_chunk_1",
+        "2024Cheng_GAIA_chunk_60",
+        "2024Cheng_GAIA_chunk_74"
+      ],
+      "enhanced_chunk_ids": [
+        "2024Cheng_GAIA_chunk_59",
+        "2024Cheng_GAIA_chunk_56",
+        "2024Cheng_GAIA_chunk_45",
+        "2024Cheng_GAIA_chunk_74"
+      ],
+      "timestamp": "2026-03-01T16:11:13.646338"
+    },
+    {
+      "query_id": "D03",
+      "category": "direct",
+      "query": "What is the exact four-stage methodology used to synthesize household daily energy data using knowledge distillation from LLMs?",
+      "status": "OK",
+      "baseline_output": "# Four-Stage Methodology for Household Energy Data Synthesis Using LLMs\n\n| Claim / Information | Supporting Text Snippet | Chunk ID |\n|---|---|---|\n| **Stage 1: Input Preparation** | \"Input Preparation: Define the target countries, seasons, number of household types per country, and weather parameters of interest. Select the LLM to be\" | [2025Takrouri_KDHEM_chunk_23] |\n| **Stage 2: Weather Parameter Definition** | \"weather parameters tailored to each country and season.\" | [2025Takrouri_KDHEM_chunk_22] |\n| **Stage 3: Synthesize Hourly Weather Data** | \"Stage 3: Synthesize hourly weather data using the identified ranges, aligned with seasonal and geographical contexts.\" | [2025Takrouri_KDHEM_chunk_22] |\n| **Stage 4: Model Daily Energy Consumption** | \"Stage 4: Model daily energy consumption patterns, incorporating member-specific activities and HVAC operations for various household types. These daily patterns are then aggregated into yearly profiles, incorporating country-specific weekends and holidays.\" | [2025Takrouri_KDHEM_chunk_22] |\n| **Overall Goal** | \"Our primary goal is to leverage LLM-driven knowledge distillation to synthesize culturally and contextually rich data for household energy modeling.\" | [2025Takrouri_KDHEM_chunk_22] |",
+      "enhanced_output": "# Four-Stage Methodology for Household Energy Data Synthesis\n\n| Claim / Information | Supporting Text Snippet | Chunk ID |\n|---|---|---|\n| **Stage 1: Family Type Definition** | \"Input Preparation: Define the target\" (methodology begins with input preparation) | [2025Takrouri_KDHEM_chunk_22] |\n| **Stage 2: Weather Parameter Identification** | \"weather parameters tailored to each country and season\" | [2025Takrouri_KDHEM_chunk_22] |\n| **Stage 3: Hourly Weather Data Synthesis** | \"Stage 3: Synthesize hourly weather data using the identified ranges, aligned with seasonal and geographical contexts.\" | [2025Takrouri_KDHEM_chunk_22] |\n| **Stage 4: Daily Energy Consumption Modeling** | \"Stage 4: Model daily energy consumption patterns, incorporating member-specific activities and HVAC operations for various household types. These daily patterns are then aggregated into yearly profiles, incorporating country-specific weekends and holidays.\" | [2025Takrouri_KDHEM_chunk_22] |\n| **Overall Goal** | \"Our primary goal is to leverage LLM-driven knowledge distillation to synthesize culturally and contextually rich data for household energy modeling.\" | [2025Takrouri_KDHEM_chunk_22] |\n\nThe methodology progresses sequentially from defining household characteristics, identifying weather parameters, synthesizing weather data, and finally modeling energy consumption patterns that incorporate both occupant behavior and environmental factors.",
+      "baseline_abstained": false,
+      "enhanced_abstained": false,
+      "baseline_chunk_ids": [
+        "2025Takrouri_KDHEM_chunk_39",
+        "2025Takrouri_KDHEM_chunk_87",
+        "2025Takrouri_KDHEM_chunk_23",
+        "2025Takrouri_KDHEM_chunk_22"
+      ],
+      "enhanced_chunk_ids": [
+        "2025Takrouri_KDHEM_chunk_22",
+        "2025Takrouri_KDHEM_chunk_39",
+        "2025Takrouri_KDHEM_chunk_87",
+        "2025Takrouri_KDHEM_chunk_49"
+      ],
+      "timestamp": "2026-03-01T16:11:25.993303"
+    },
+    {
+      "query_id": "D04",
+      "category": "direct",
+      "query": "What are the two adaptation strategies compared during the development of EnergyGPT, and which base LLM was utilized?",
+      "status": "OK",
+      "baseline_output": "| Claim / Information | Supporting Text Snippet | Chunk ID |\n|---|---|---|\n| Base LLM utilized for EnergyGPT | \"In our work, we adopted the open-source LLaMA 3.1-8B [57] as the foundation model of EnergyGPT.\" | [2026Chebbi_EnergyGPT_chunk_39] |\n| Two adaptation strategies compared | The provided context mentions \"EnergyGPT Response (LoRA)\" and \"EnergyGPT Response (SFT)\" in chunks 160 and 158, indicating LoRA and SFT as the two strategies being compared. | [2026Chebbi_EnergyGPT_chunk_160], [2026Chebbi_EnergyGPT_chunk_158] |\n\n**Note:** While the context clearly identifies **LLaMA 3.1-8B** as the base model and shows evidence of **LoRA** and **SFT** (Supervised Fine-Tuning) as two adaptation strategies being compared, the provided chunks do not contain a comprehensive explanation of these two strategies or their detailed comparison. For more complete information about how these strategies differ and their comparative performance, additional context would be needed.",
+      "enhanced_output": "| Claim / Information | Supporting Text Snippet | Chunk ID |\n|---|---|---|\n| Two adaptation strategies compared | \"We consider two adaptation strategies: a full-parameter Supervised Fine-Tuning variant and a parameter-ef\ufb01cient LoRA-based variant that updates only a small fraction of the model parameters.\" | [2026Chebbi_EnergyGPT_chunk_1] |\n| Base LLM utilized | \"In our work, we adopted the open-source LLaMA 3.1-8B [57] as the foundation model of EnergyGPT.\" | [2026Chebbi_EnergyGPT_chunk_39] |",
+      "baseline_abstained": false,
+      "enhanced_abstained": false,
+      "baseline_chunk_ids": [
+        "2026Chebbi_EnergyGPT_chunk_163",
+        "2026Chebbi_EnergyGPT_chunk_160",
+        "2026Chebbi_EnergyGPT_chunk_158",
+        "2026Chebbi_EnergyGPT_chunk_39"
+      ],
+      "enhanced_chunk_ids": [
+        "2026Chebbi_EnergyGPT_chunk_1",
+        "2026Chebbi_EnergyGPT_chunk_39",
+        "2026Chebbi_EnergyGPT_chunk_40",
+        "2026Chebbi_EnergyGPT_chunk_99"
+      ],
+      "timestamp": "2026-03-01T16:11:38.807914"
+    },
+    {
+      "query_id": "D05",
+      "category": "direct",
+      "query": "According to the comprehensive literature survey by Sarwar et al., what are the primary challenges limiting the practical implementation of LLMs in power systems?",
+      "status": "OK",
+      "baseline_output": "# Primary Challenges Limiting LLM Implementation in Power Systems\n\nBased on the Sarwar et al. literature survey, the following table summarizes the primary challenges:\n\n| Claim / Information | Supporting Text Snippet | Chunk ID |\n|---|---|---|\n| Lack of explainability and transparency in LLM decision-making | \"the lack of explainability and transparency in the decision-making processes of many LLMs makes it difficult to build trust among power system operators and engineers, which is crucial for their adoption in critical infrastructure\" | [2025Sarwar_LitSurvey_chunk_38] |\n| Inherent limitations in reliability and safety | \"The inherent limitations related to reliability, safety, and domain-specific reasoning present significant barriers to the direct deployment of LLMs in core power system operational roles\" | [2025Sarwar_LitSurvey_chunk_38] |\n| Sustainability concerns | \"pose a challenge, raising concerns about the sustainability of their widespread use\" | [2025Sarwar_LitSurvey_chunk_38] |\n| Domain-specific reasoning deficiencies | \"The inherent limitations related to reliability, safety, and domain-specific reasoning present significant barriers to the direct deployment of LLMs in core power system operational roles\" | [2025Sarwar_LitSurvey_chunk_38] |\n| Need for phased integration approach | \"necessitating a careful and phased approach to their integration\" | [2025Sarwar_LitSurvey_chunk_38] |",
+      "enhanced_output": "| Claim / Information | Supporting Text Snippet | Chunk ID |\n|---|---|---|\n| Energy sustainability concerns with LLMs | \"pose a challenge, raising concerns about the sustainability of their widespread use\" | [2025Sarwar_LitSurvey_chunk_38] |\n| Lack of explainability and transparency | \"the lack of explainability and transparency in the decision-making processes of many LLMs makes it difficult to build trust among power system operators and engineers, which is crucial for their adoption in critical infrastructure\" | [2025Sarwar_LitSurvey_chunk_38] |\n| Reliability, safety, and domain-specific reasoning limitations | \"The inherent limitations related to reliability, safety, and domain-specific reasoning present significant barriers to the direct deployment of LLMs in core power system operational roles, necessitating a careful and phased approach to their integration\" | [2025Sarwar_LitSurvey_chunk_38] |",
+      "baseline_abstained": false,
+      "enhanced_abstained": false,
+      "baseline_chunk_ids": [
+        "2025Sarwar_LitSurvey_chunk_38",
+        "2025Madani_LLMSG_chunk_20",
+        "2025Madani_LLMSG_chunk_9",
+        "2025Li_RisksSG_chunk_10"
+      ],
+      "enhanced_chunk_ids": [
+        "2025Mirshekali_EnergySysReview_chunk_102",
+        "2025Sarwar_LitSurvey_chunk_0",
+        "2025Sarwar_LitSurvey_chunk_38",
+        "2025Madani_LLMSG_chunk_20"
+      ],
+      "timestamp": "2026-03-01T16:11:49.855810"
+    },
+    {
+      "query_id": "D06",
+      "category": "direct",
+      "query": "What predictive and prescriptive maintenance strategies do LLMs enable for improving overall grid reliability?",
+      "status": "OK",
+      "baseline_output": "I cannot find evidence for this claim in the provided context.\n\nWhile the provided context chunks discuss LLM applications in grid asset management, they do not contain specific information about predictive and prescriptive maintenance strategies or how LLMs enable improvements to overall grid reliability.\n\nThe closest relevant information is:\n\n| Claim / Information | Supporting Text Snippet | Chunk ID |\n|---|---|---|\n| LLMs can support asset lifecycle management decisions | \"These biographies provide valuable context for decision-making regarding maintenance scheduling, equipment replacement, and risk assessment.\" | [2025Madani_LLMSG_chunk_94] |\n| LLMs can process diverse data sources for asset understanding | \"LLMs can process unstructured data alongside structured data to create a richer and more comprehensive understanding of each asset's life story.\" | [2025Madani_LLMSG_chunk_95] |\n\nHowever, these chunks do not explicitly detail predictive maintenance strategies, prescriptive maintenance approaches, or quantified impacts on grid reliability. To answer your question comprehensively, I would need context chunks that specifically address predictive/prescriptive maintenance methodologies and their reliability outcomes.",
+      "enhanced_output": "# LLM-Enabled Predictive and Prescriptive Maintenance Strategies for Grid Reliability\n\n| Claim / Information | Supporting Text Snippet | Chunk ID |\n|---|---|---|\n| LLMs can predict leakage current increases in time series forecasting for fault prediction | \"deep learning models in predicting leakage current increases, indicating the potential of LLMs in time series forecasting for fault prediction\" | [2025Sarwar_LitSurvey_chunk_12] |\n| LLMs enable anomaly detection in smart grids to identify unusual patterns indicative of faults | \"The broader potential of LLMs for anomaly detection in smart grids has also been highlighted. These models could be used to analyze various data sources to identify unusual patterns indicative of faults or other anomalies, contributing to predictive maintenance strategies\" | [2025Sarwar_LitSurvey_chunk_12] |\n| LLMs can enhance traditional machine learning approaches for fault detection through improved feature extraction | \"LLMs could potentially enhance these methods by providing more contextual understanding and improved feature extraction from heterogeneous data sources\" | [2025Sarwar_LitSurvey_chunk_12] |\n| AI-based predictive maintenance strategies improve reliability of green power systems | \"AI-based predictive maintenance strategies for improving the reliability of green power systems\" | [2025Mirshekali_EnergySysReview_chunk_131] |\n| Transformer-KAN forecasting is used in consequence-aware prescriptive maintenance frameworks | \"Consequence-aware prescriptive maintenance framework with transformer-KAN forecasting\" | [2025Mirshekali_EnergySysReview_chunk_131] |",
+      "baseline_abstained": true,
+      "enhanced_abstained": false,
+      "baseline_chunk_ids": [
+        "2025Madani_LLMSG_chunk_94",
+        "2025Madani_LLMSG_chunk_95",
+        "2025Madani_LLMSG_chunk_26",
+        "2025Madani_LLMSG_chunk_127"
+      ],
+      "enhanced_chunk_ids": [
+        "2025Sarwar_LitSurvey_chunk_12",
+        "2025Mirshekali_EnergySysReview_chunk_131",
+        "2025Madani_LLMSG_chunk_44",
+        "2025Zhang_GridAgent_chunk_33"
+      ],
+      "timestamp": "2026-03-01T16:12:02.059219"
+    },
+    {
+      "query_id": "D07",
+      "category": "direct",
+      "query": "How does the direct integration of external weather datasets bypass intermediate modeling stages in household energy modeling?",
+      "status": "OK",
+      "baseline_output": "| Claim / Information | Supporting Text Snippet | Chunk ID |\n|---|---|---|\n| External weather datasets can be directly integrated, bypassing intermediate weather modeling stages | \"we explore an alternative strategy where external weather datasets can be directly integrated, bypassing intermediate weather modeling stages while ensuring physically consistent data inputs\" | [2025Takrouri_KDHEM_chunk_1] |\n| This approach maintains physical consistency of data inputs | \"bypassing intermediate weather modeling stages while ensuring physically consistent data inputs\" | [2025Takrouri_KDHEM_chunk_1] |\n| The framework enriches simulation fidelity by avoiding intermediate steps | \"Our framework not only enriches the fidelity of simulated consumption patterns but also offers a context-sensitive perspective on household energy modeling\u2014bridging the gap between static assumptions and dynamic, culturally informed simulations\" | [2025Takrouri_KDHEM_chunk_9] |\n\n**Note:** The provided context explains *that* external weather datasets bypass intermediate modeling stages and *that* this maintains physical consistency, but it does not provide detailed explanation of *how* this technical bypass works mechanically. The context indicates this is an \"alternative strategy\" to the four-stage methodology but does not elaborate on the specific technical mechanisms involved in the integration process.",
+      "enhanced_output": "| Claim / Information | Supporting Text Snippet | Chunk ID |\n|---|---|---|\n| External weather datasets can be directly integrated to bypass intermediate weather modeling stages | \"we propose an alternative approach that integrates external weather datasets, thereby bypassing intermediate modeling steps while ensuring physically consistent data inputs\" | [2025Takrouri_KDHEM_chunk_9] |\n| This approach maintains physical consistency of data inputs | \"integrates external weather datasets, thereby bypassing intermediate modeling steps while ensuring physically consistent data inputs\" | [2025Takrouri_KDHEM_chunk_9] |\n| The alternative strategy reduces computational overhead | \"To further enhance realism and reduce computational overhead, we propose an alternative approach that integrates external weather datasets\" | [2025Takrouri_KDHEM_chunk_8] |\n\n**Note:** While the provided context confirms that direct integration of external weather datasets bypasses intermediate modeling stages and reduces computational overhead, the context does not contain detailed technical explanation of *how* this integration mechanically works or what specific intermediate stages are eliminated. The context only states that this approach is an \"alternative strategy\" to the four-stage methodology but does not elaborate on the technical mechanisms of the bypass process.",
+      "baseline_abstained": false,
+      "enhanced_abstained": true,
+      "baseline_chunk_ids": [
+        "2025Takrouri_KDHEM_chunk_9",
+        "2025Takrouri_KDHEM_chunk_22",
+        "2025Takrouri_KDHEM_chunk_39",
+        "2025Takrouri_KDHEM_chunk_1"
+      ],
+      "enhanced_chunk_ids": [
+        "2025Takrouri_KDHEM_chunk_1",
+        "2025Takrouri_KDHEM_chunk_8",
+        "2025Takrouri_KDHEM_chunk_9",
+        "2025Takrouri_KDHEM_chunk_59"
+      ],
+      "timestamp": "2026-03-01T16:12:14.102959"
+    },
+    {
+      "query_id": "D08",
+      "category": "direct",
+      "query": "What are the specific threat models associated with prompt injection and bad data injection in smart grid LLMs?",
+      "status": "OK",
+      "baseline_output": "# Threat Models for Smart Grid LLMs\n\n| Claim / Information | Supporting Text Snippet | Chunk ID |\n|---|---|---|\n| Two major types of attacks identified for smart grid LLM applications | \"we systematically evaluated the risks of LLMs and identified two major types of attacks relevant to potential smart grid LLM applications, presenting the corresponding threat models\" | [2025Li_RisksSG_chunk_1] |\n| Main risks categorized as bad data injection and domain knowledge extraction | \"we categorize the main risks of LLMs for smart grid applications into bad data injection and domain knowledge extraction, as demonstrated in Figure 1. Accordingly, we propose two different threat models.\" | [2025Li_RisksSG_chunk_15] |\n| Bad data injection threat model scope | \"Bad data injection primarily concerns scenarios where LLMs receive input from public re-\" | [2025Li_RisksSG_chunk_15] |\n| Prompt injection identified as a vulnerability type | \"such as jailbreak [31], prompt injection [32], and privacy violations [33]\" | [2025Li_RisksSG_chunk_12] |\n\n## Important Limitation\n\n**I cannot find evidence for detailed specifications of the threat models in the provided context.** While the chunks confirm that two threat models exist (bad data injection and domain knowledge extraction) and that prompt injection is a relevant vulnerability, the provided context does not contain the specific technical details, attack vectors, or comprehensive descriptions of how these threat models operate. The text on bad data injection is incomplete (ending mid-sentence), and no detailed threat model specifications are included in these chunks.",
+      "enhanced_output": "# Threat Models for Smart Grid LLMs\n\n| Claim / Information | Supporting Text Snippet | Chunk ID |\n|---|---|---|\n| Two general threat models are proposed for potential attacks on LLMs deployed in smart grids | \"we propose two general threat models for potential attacks on LLMs deployed in smart grids: (1) bad data injection attacks by external adversaries, and (2) domain knowledge extraction attacks by internal & external actors.\" | [2025Li_RisksSG_chunk_5] |\n| Bad data injection is categorized as a main risk of LLMs for smart grid applications | \"we categorize the main risks of LLMs for smart grid applications into bad data injection and domain knowledge extraction\" | [2025Li_RisksSG_chunk_15] |\n| Bad data injection threat model assumes public access to LLMs | \"Public Access: LLMs receive inputs from a public access point, making them accessible to a wide user base.\" | [2025Li_RisksSG_chunk_17] |\n| Attacker capabilities in bad data injection model | \"The attacker is assumed to be able to modify legitimate input sent to the LLMs via this public interface. However, attackers cannot receive the direct output from the LLMs.\" | [2025Li_RisksSG_chunk_17] |\n| Attacker knowledge assumptions in bad data injection model | \"The attacker possesses knowledge about the high-level purpose of the LLMs and their potential output requirements.\" | [2025Li_RisksSG_chunk_17] |\n| General representation of bad data injection | \"LLM(Manipulated Input \\| Prompt) \u2192Wrong Output\" | [2025Li_RisksSG_chunk_17] |\n\n**Note:** I cannot find evidence for specific threat models associated with \"prompt injection\" in the provided context. The context discusses \"bad data injection\" and \"domain knowledge extraction\" as the two main threat types.",
+      "baseline_abstained": true,
+      "enhanced_abstained": true,
+      "baseline_chunk_ids": [
+        "2025Li_RisksSG_chunk_1",
+        "2025Li_RisksSG_chunk_4",
+        "2025Li_RisksSG_chunk_12",
+        "2025Li_RisksSG_chunk_15"
+      ],
+      "enhanced_chunk_ids": [
+        "2025Li_RisksSG_chunk_5",
+        "2025Li_RisksSG_chunk_15",
+        "2025Li_RisksSG_chunk_17",
+        "2025Li_RisksSG_chunk_21"
+      ],
+      "timestamp": "2026-03-01T16:12:28.029209"
+    },
+    {
+      "query_id": "D09",
+      "category": "direct",
+      "query": "How does the parameter-efficient LoRA-based variant of EnergyGPT differ from the full-parameter Supervised Fine-Tuning variant in terms of infrastructure requirements?",
+      "status": "OK",
+      "baseline_output": "I cannot find evidence for this claim in the provided context.\n\nWhile the provided chunks mention that LoRA fine-tuning shows \"outstanding performance in training efficiency and performance convergence\" (Chunk ID: [2024Cheng_GAIA_chunk_62]), and there are references to EnergyGPT responses using LoRA, the context does not contain any direct comparison between the infrastructure requirements of a LoRA-based variant versus a full-parameter Supervised Fine-Tuning variant of EnergyGPT.\n\nTo answer your question accurately, I would need context that explicitly discusses and compares the infrastructure, computational, or resource requirements between these two approaches.",
+      "enhanced_output": "| Claim / Information | Supporting Text Snippet | Chunk ID |\n|---|---|---|\n| LoRA updates only a small fraction of model parameters | \"a parameter-ef\ufb01cient LoRA-based variant that updates only a small fraction of the model parameters\" | [2026Chebbi_EnergyGPT_chunk_1] |\n| LoRA results in approximately 10.5M trainable parameters (0.13% of the 8B base model) | \"This results in approximately 10.5M trainable parameters, i.e., about 0.13% of the 8B-parameter base model.\" | [2026Chebbi_EnergyGPT_chunk_43] |\n| Training strategy enables improvements without large-scale infrastructure | \"our training strategy enables improvements in domain relevance and performance without the need for large-scale infrastructure\" | [2026Chebbi_EnergyGPT_chunk_1] |\n| LoRA provides gains with reduced training cost | \"allowing us to quantify the trade-offs between maximal domain gains and reduced training cost\" | [2026Chebbi_EnergyGPT_chunk_8] |\n\n**Note:** While the context confirms that LoRA is parameter-efficient and enables reduced training costs compared to full-parameter SFT, I cannot find explicit, detailed comparisons of specific infrastructure requirements (e.g., memory, compute, time) between the two variants in the provided context.",
+      "baseline_abstained": true,
+      "enhanced_abstained": false,
+      "baseline_chunk_ids": [
+        "2026Chebbi_EnergyGPT_chunk_195",
+        "2026Chebbi_EnergyGPT_chunk_255",
+        "2024Cheng_GAIA_chunk_62",
+        "2026Chebbi_EnergyGPT_chunk_160"
+      ],
+      "enhanced_chunk_ids": [
+        "2026Chebbi_EnergyGPT_chunk_1",
+        "2026Chebbi_EnergyGPT_chunk_43",
+        "2026Chebbi_EnergyGPT_chunk_73",
+        "2026Chebbi_EnergyGPT_chunk_8"
+      ],
+      "timestamp": "2026-03-01T16:12:40.413697"
+    },
+    {
+      "query_id": "D10",
+      "category": "direct",
+      "query": "How does the GAIA architecture improve upon traditional methods regarding human-machine collaboration in real-time advanced power dispatch scenarios?",
+      "status": "OK",
+      "baseline_output": "I cannot find evidence for this claim in the provided context.\n\nWhile the provided context mentions that GAIA addresses \"human-machine collaboration\" as a challenge that traditional methods struggle with, the chunks do not contain specific details about **how** the GAIA architecture actually improves upon traditional methods in this regard, nor do they describe the architectural features that enable better human-machine collaboration in real-time advanced power dispatch scenarios.\n\nThe context only states the problem:\n\n| Claim / Information | Supporting Text Snippet | Chunk ID |\n|---|---|---|\n| Traditional methods struggle with human-machine collaboration | \"traditional methods falter as power systems grow in scale and complexity, struggling with multitasking, swift problem-solving, and human-machine collaboration\" | [2024Cheng_GAIA_chunk_1] |\n\nTo answer your question comprehensively, I would need additional context chunks that describe GAIA's architectural design, its interaction mechanisms, or specific case studies demonstrating improved human-machine collaboration compared to traditional dispatch methods.",
+      "enhanced_output": "| Claim / Information | Supporting Text Snippet | Chunk ID |\n|---|---|---|\n| GAIA enhances human-machine collaboration through natural language interaction | \"dispatchers can interact with LLM naturally using natural language and understand and trust LLM's results\" | [2024Cheng_GAIA_chunk_10] |\n| GAIA fuses simulation and textual data for improved applicability | \"a model that uniquely fuses simulation numerical data with textual data, creating a dataset that encompasses operational and knowledge-based information, thus improving the model's applicability\" | [2024Cheng_GAIA_chunk_10] |\n| GAIA demonstrates ability to enhance decision-making and operational efficiency | \"GAIA has demonstrated its ability to enhance decision-making processes, improve operational efficiency, and facilitate better human-machine interactions in power dispatch operations\" | [2024Cheng_GAIA_chunk_2] |\n| GAIA framework includes specialized data processing for dispatch scenarios | \"The overall framework's pipeline includes the following three key steps: 1. Simulation Data Processing: We select simulation scenarios that align with dispatch operations: adjustment, monitoring, and black start\" | [2024Cheng_GAIA_chunk_28] |\n| GAIA surpasses baseline models on multiple metrics | \"GAIA surpasses the baseline model LLaMA2 on multiple metrics\" | [2024Cheng_GAIA_chunk_2] |\n\n**Note:** While the context demonstrates that GAIA improves human-machine collaboration through natural language interfaces and demonstrates practical benefits, I cannot find specific technical details in the provided context about how the architecture itself (e.g., specific model components, algorithms, or architectural innovations) achieves these improvements in real-time dispatch scenarios.",
+      "baseline_abstained": true,
+      "enhanced_abstained": false,
+      "baseline_chunk_ids": [
+        "2024Cheng_GAIA_chunk_1",
+        "2025Sarwar_LitSurvey_chunk_20",
+        "2024Cheng_GAIA_chunk_59",
+        "2024Cheng_GAIA_chunk_9"
+      ],
+      "enhanced_chunk_ids": [
+        "2024Cheng_GAIA_chunk_74",
+        "2024Cheng_GAIA_chunk_2",
+        "2024Cheng_GAIA_chunk_10",
+        "2024Cheng_GAIA_chunk_28"
+      ],
+      "timestamp": "2026-03-01T16:12:53.725488"
+    },
+    {
+      "query_id": "S01",
+      "category": "synthesis",
+      "query": "Compare the deployment infrastructure challenges discussed in the EnergyGPT paper with the computational cost limitations highlighted in the comprehensive survey by Sarwar et al.. Where do they align?",
+      "status": "OK",
+      "baseline_output": "I cannot find evidence for this claim in the provided context.\n\nWhile the provided chunks include references to the EnergyGPT paper (Chunk ID: [2026Chebbi_EnergyGPT_chunk_195]) and mention a comprehensive survey on energy systems and LLMs (Chunk ID: [2025Mirshekali_EnergySysReview_chunk_12]), the context does not contain:\n\n1. **Specific deployment infrastructure challenges from the EnergyGPT paper** - The available chunk only shows an optimization problem formulation for particulate emissions, not deployment infrastructure discussion.\n\n2. **A work by \"Sarwar et al.\"** - There is no reference to or content from a Sarwar et al. paper in the provided context chunks.\n\n3. **Comparative analysis between these two sources** - No direct comparison or alignment discussion exists in the available material.\n\nTo answer your question accurately, I would need access to:\n- The full EnergyGPT deployment section discussing infrastructure challenges\n- The Sarwar et al. paper or relevant sections discussing computational cost limitations\n- Any comparative analysis between these sources",
+      "enhanced_output": "# Comparison of Deployment Infrastructure and Computational Cost Challenges\n\nBased on my review of the provided context chunks, I can only partially address your question:\n\n| Aspect | Finding | Chunk ID |\n|--------|---------|----------|\n| **EnergyGPT Deployment Infrastructure** | The EnergyGPT paper discusses deployment setup using \"a production-grade NIM server, first on-premises for local testing and subsequently in Azure integrated with Azure API Management for secure and scalable access.\" | [2026Chebbi_EnergyGPT_chunk_11] |\n| **Sarwar et al. Computational Cost Limitations** | The survey mentions that computational costs \"pose a challenge, raising concerns about the sustainability of their widespread use.\" | [2025Sarwar_LitSurvey_chunk_38] |\n| **Alignment Between Sources** | I cannot find evidence for direct alignment or comparison between these two sources in the provided context. |  |\n\n## Key Limitation\n\n**I cannot find evidence in the provided context for a detailed comparison of how EnergyGPT's specific deployment infrastructure addresses (or fails to address) the computational cost sustainability concerns raised by Sarwar et al.** The context chunks do not contain sufficient detail about the computational cost implications of EnergyGPT's deployment architecture or how it relates to the broader sustainability challenges discussed in the survey.\n\nTo answer your question comprehensively, I would need context chunks that explicitly discuss computational efficiency metrics, cost analysis, or scalability assessments from both papers.",
+      "baseline_abstained": true,
+      "enhanced_abstained": true,
+      "baseline_chunk_ids": [
+        "2025Li_RisksSG_chunk_49",
+        "2026Chebbi_EnergyGPT_chunk_195",
+        "2025Yang_RL2EM_chunk_87",
+        "2025Mirshekali_EnergySysReview_chunk_12"
+      ],
+      "enhanced_chunk_ids": [
+        "2025Mirshekali_EnergySysReview_chunk_102",
+        "2026Chebbi_EnergyGPT_chunk_11",
+        "2025Sarwar_LitSurvey_chunk_43",
+        "2025Sarwar_LitSurvey_chunk_38",
+        "2026Chebbi_EnergyGPT_chunk_213",
+        "2026Chebbi_EnergyGPT_chunk_124"
+      ],
+      "timestamp": "2026-03-01T16:13:11.029570"
+    },
+    {
+      "query_id": "S02",
+      "category": "synthesis",
+      "query": "How do the cybersecurity threat models identified by Li et al. complicate the autonomous power dispatch operations proposed by the GAIA architecture?",
+      "status": "OK",
+      "baseline_output": "I cannot find evidence for this claim in the provided context.\n\nThe provided context chunks discuss GAIA's architecture, training data composition, and performance evaluation for power dispatch tasks, but they do not contain any information about:\n1. Cybersecurity threat models identified by Li et al.\n2. How such threat models might complicate autonomous power dispatch operations\n3. Any discussion of cybersecurity considerations in relation to GAIA\n\nTo answer your question accurately, I would need context chunks that specifically address cybersecurity threat modeling and its relationship to the GAIA system or autonomous power dispatch operations.",
+      "enhanced_output": "I cannot find evidence for this claim in the provided context.\n\nWhile the context mentions both cybersecurity threats identified by Li et al. and the GAIA architecture separately, there is no information provided that directly connects or discusses how these threat models complicate GAIA's autonomous power dispatch operations.\n\nHere is what the context does contain:\n\n| Claim / Information | Supporting Text Snippet | Chunk ID |\n|---|---|---|\n| Li et al. identified LLM risks in smart grids | \"Li et al. [31] assessed LLM risks in smart grids, identifying data injection and knowledge retrieval attacks.\" | [2025Madani_LLMSG_chunk_16] |\n| GAIA is designed for power dispatch tasks | \"GAIA-70b outperforms LLaMA2 and GPT-3.5 in key performance indicators, especially in terms of accuracy and stability in operation monitoring and power dispatching.\" | [2024Cheng_GAIA_chunk_61] |\n\nTo answer your question, I would need context that explicitly discusses the intersection of Li et al.'s cybersecurity findings with GAIA's operational framework.",
+      "baseline_abstained": true,
+      "enhanced_abstained": true,
+      "baseline_chunk_ids": [
+        "2024Cheng_GAIA_chunk_59",
+        "2024Cheng_GAIA_chunk_61",
+        "2024Cheng_GAIA_chunk_75",
+        "2024Cheng_GAIA_chunk_9"
+      ],
+      "enhanced_chunk_ids": [
+        "2024Cheng_GAIA_chunk_61",
+        "2024Cheng_GAIA_chunk_63",
+        "2025Madani_LLMSG_chunk_16",
+        "2025Xiang_LLMSecOp_chunk_12",
+        "2024Cheng_GAIA_chunk_59",
+        "2025Xiang_LLMSecOp_chunk_10"
+      ],
+      "timestamp": "2026-03-01T16:13:26.406103"
+    },
+    {
+      "query_id": "S03",
+      "category": "synthesis",
+      "query": "Synthesize the findings from Mirshekali's review and Sarwar's literature survey regarding the use of LLMs for fault diagnosis in power systems. What consensus emerges about their effectiveness?",
+      "status": "OK",
+      "baseline_output": "I cannot find evidence for this claim in the provided context.\n\nThe provided context chunks do not contain any material from \"Mirshekali's review.\" The context only includes chunks from:\n- 2025Sarwar_LitSurvey\n- 2024Jing_FaultDiagnosis\n\nTo synthesize findings between Mirshekali's review and Sarwar's literature survey, I would need context chunks from Mirshekali's work. Without that source material, I cannot provide the comparative analysis you've requested.\n\n**What I can provide** is a summary of the consensus that emerges from the available context regarding LLM effectiveness for power system fault diagnosis:\n\n| Claim / Information | Supporting Text Snippet | Chunk ID |\n|---|---|---|\n| LLMs show improved diagnostic accuracy | \"Experimental results demonstrated significant improvements in diagnostic accuracy\" | [2025Sarwar_LitSurvey_chunk_10] |\n| Prompt engineering enhances LLM performance | \"our prompt engineering method not only enhances the diagnostic capabilities of LLMs but also ensures that the generated insights are explainable and actionable\" | [2024Jing_FaultDiagnosis_chunk_28] |\n| Robustness confirmed in complex scenarios | \"The results from these additional tests confirmed the robustness and reliability of our method. Even under challenging conditions, our prompt-engineered approach consistently provided accurate diagnoses\" | [2024Jing_FaultDiagnosis_chunk_28] |\n| Explainability is a key requirement | \"the black-box nature of many LLMs raises concerns about the explainability of their diagnoses, which is crucial for operators\" | [2024Jing_FaultDiagnosis_chunk_3] |",
+      "enhanced_output": "# Synthesis of LLM Applications for Fault Diagnosis in Power Systems\n\n| Claim / Information | Supporting Text Snippet | Chunk ID |\n|---|---|---|\n| **LLMs show promise for fault diagnosis through improved accuracy** | \"the study demonstrates enhanced accuracy\" (regarding GPT-4 integration with prompt engineering and real-time sensor data) | [2025Mirshekali_EnergySysReview_chunk_58] |\n| **Prompt engineering is a key methodology** | \"Jing and Rahman [13] investigated the application of ChatGPT and GPT-4, combined with advanced prompt engineering, to improve the accuracy and explainability of fault diagnoses\" | [2025Sarwar_LitSurvey_chunk_10] |\n| **Significant improvements in diagnostic accuracy demonstrated** | \"Experimental results demonstrated significant improvements in diagnostic accuracy, the quality of\" (explanations) | [2025Sarwar_LitSurvey_chunk_10] |\n| **Fault diagnosis is a primary application area** | \"The findings highlight a growing interest in leveraging the capabilities of LLMs across various domains, including fault diagnosis, load forecasting, cybersecurity...\" | [2025Sarwar_LitSurvey_chunk_42] |\n| **Critical challenges remain despite potential** | \"significant challenges remain in their practical implementation. These challenges include limited domain-specific training data, concerns about reliability and safety in critical infrastructure, and the need for enhanced explainability\" | [2025Sarwar_LitSurvey_chunk_1] |\n| **Explainability is crucial but problematic** | \"the black-box nature of many LLMs raises concerns about the explainability of their diagnoses, which is crucial for operators who need to understand and trust the system's recommendations\" | [2024Jing_FaultDiagnosis_chunk_3] |\n\n## Consensus Summary\n\nBoth reviews converge on a **cautiously optimistic consensus**: LLMs demonstrate measurable improvements in fault diagnosis accuracy when combined with prompt engineering and contextual data (sensor readings, historical logs, component descriptions). However, this promise is tempered by significant implementation challenges, particularly regarding explainability, domain-specific data limitations, and the need for operator trust in critical infrastructure applications.",
+      "baseline_abstained": true,
+      "enhanced_abstained": false,
+      "baseline_chunk_ids": [
+        "2025Sarwar_LitSurvey_chunk_10",
+        "2024Jing_FaultDiagnosis_chunk_15",
+        "2024Jing_FaultDiagnosis_chunk_28",
+        "2024Jing_FaultDiagnosis_chunk_3"
+      ],
+      "enhanced_chunk_ids": [
+        "2025Mirshekali_EnergySysReview_chunk_58",
+        "2025Sarwar_LitSurvey_chunk_10",
+        "2025Sarwar_LitSurvey_chunk_42",
+        "2025Sarwar_LitSurvey_chunk_1",
+        "2024Jing_FaultDiagnosis_chunk_6",
+        "2024Jing_FaultDiagnosis_chunk_3"
+      ],
+      "timestamp": "2026-03-01T16:13:45.129958"
+    },
+    {
+      "query_id": "S04",
+      "category": "synthesis",
+      "query": "Both Takrouri et al. (Household Energy Modeling) and Cheng et al. (GAIA) focus on specific operational tasks. Compare their differing approaches to handling domain-specific data scarcity.",
+      "status": "OK",
+      "baseline_output": "I cannot find evidence for this claim in the provided context.\n\nThe context chunks provided contain only excerpts from the Takrouri et al. (2025) paper on household energy modeling. There is no information about a \"Cheng et al. (GAIA)\" paper or its approaches to handling domain-specific data scarcity in the provided context.\n\nTo answer your comparison question, I would need context chunks that include:\n1. Details about the Cheng et al. (GAIA) paper's methodology\n2. Explicit discussion of how both papers approach data scarcity differently\n\n**What I can confirm from the provided context:**\n\n| Claim / Information | Supporting Text Snippet | Chunk ID |\n|---|---|---|\n| Takrouri et al. addresses gaps in household energy modeling | \"Current models often rely on limited assumptions about family structures and behaviors, neglecting the nuanced and culturally specific dynamics necessary for accurate simulations.\" | [2025Takrouri_KDHEM_chunk_17] |\n| Takrouri et al. uses LLMs to address data integration challenges | \"To address these limitations, this research leverages LLMs to generate a consistent framework that\" | [2025Takrouri_KDHEM_chunk_17] |\n\nPlease provide context chunks related to the Cheng et al. (GAIA) paper if you would like me to perform the comparison.",
+      "enhanced_output": "# Comparison of Domain-Specific Data Scarcity Approaches\n\n| Claim / Information | Supporting Text Snippet | Chunk ID |\n|---|---|---|\n| **Takrouri et al. approach: Using LLMs to generate synthetic household energy data** | \"We propose integrating Large Language Models (LLMs) in energy modeling to generate realistic, culturally sensitive, and behavior-specific data for household energy usage across diverse geographies.\" | [2025Takrouri_KDHEM_chunk_0] |\n| **Takrouri et al. motivation: Addressing data scarcity due to privacy concerns** | \"Machine learning (ML) is increasingly vital for smart-grid research, yet restricted access to realistic, diverse data\u2014often due to privacy concerns\u2014slows progress and fuels doubts within the energy sector about adopting ML-based strategies.\" | [2025Takrouri_KDHEM_chunk_0] |\n| **Takrouri et al. advantage: Bypassing intermediate modeling steps** | \"Our framework...offers a context-sensitive perspective on household energy modeling\u2014bridging the gap between static assumptions and dynamic, culturally informed simulations\" and \"bypassing intermediate modeling steps while ensuring physically consistent data inputs.\" | [2025Takrouri_KDHEM_chunk_9] |\n| **Cheng et al. approach: Creating a dedicated pipeline for data generation and LLM training** | \"We introduce a dedicated pipeline for data generation, processing, and LLM training tailored to power dispatch challenges.\" | [2024Cheng_GAIA_chunk_11] |\n| **Cheng et al. strategy: Scenario categorization and specialized prompt design** | \"We categorize power dispatch scenarios and design specific prompts for targeted training, incorporating techniques for interacting with LLMs, such as vector data representation, text data enrichment, and specialized terminology handling.\" | [2024Cheng_GAIA_chunk_11] |\n\n## Summary\n\n**Takrouri et al.** addresses data scarcity through **synthetic data generation**, leveraging LLMs to create culturally-sensitive household energy profiles that overcome privacy restrictions. **Cheng et al.** addresses data scarcity through **domain-specific pipeline engineering**, using scenario categorization and specialized prompt techniques to train LLMs for power dispatch tasks. Both use LLMs but differ in scope: Takrouri focuses on generating diverse behavioral data, while Cheng focuses on structured training for specific operational scenarios.",
+      "baseline_abstained": true,
+      "enhanced_abstained": false,
+      "baseline_chunk_ids": [
+        "2025Takrouri_KDHEM_chunk_12",
+        "2025Takrouri_KDHEM_chunk_9",
+        "2025Takrouri_KDHEM_chunk_17",
+        "2025Takrouri_KDHEM_chunk_14"
+      ],
+      "enhanced_chunk_ids": [
+        "2025Takrouri_KDHEM_chunk_0",
+        "2025Takrouri_KDHEM_chunk_4",
+        "2025Takrouri_KDHEM_chunk_5",
+        "2024Cheng_GAIA_chunk_11",
+        "2025Takrouri_KDHEM_chunk_13",
+        "2025Takrouri_KDHEM_chunk_9"
+      ],
+      "timestamp": "2026-03-01T16:14:03.160811"
+    },
+    {
+      "query_id": "S05",
+      "category": "synthesis",
+      "query": "What are the primary risk factors and threat models associated with deploying LLMs in smart grids?",
+      "status": "OK",
+      "baseline_output": "# Primary Risk Factors and Threat Models for LLMs in Smart Grids\n\n| Claim / Information | Supporting Text Snippet | Chunk ID |\n|---|---|---|\n| **Two major types of attacks identified** | \"identified two major types of attacks relevant to potential smart grid LLM applications, presenting the corresponding threat models\" | [2025Li_RisksSG_chunk_1] |\n| **Bad data injection attacks** | \"attackers are capable of injecting bad data and retrieving domain knowledge from LLMs employed in different smart grid applications\" | [2025Li_RisksSG_chunk_1] |\n| **Unauthorized information retrieval** | \"attackers are capable of injecting bad data and retrieving domain knowledge from LLMs employed in different smart grid applications\" | [2025Li_RisksSG_chunk_1] |\n| **Outsider attack vector** | \"an outsider attacker injects false information into LLMs\" | [2025Li_RisksSG_chunk_4] |\n| **Insider attack vector** | \"an internal attacker obtains unauthorized information from LLMs\" | [2025Li_RisksSG_chunk_4] |\n| **Critical risks identified in prior work** | \"identifies critical risks such as privacy invasion, deteriorated performance, and semantic divergence\" | [2025Li_RisksSG_chunk_10] |\n| **Limited prior research** | \"the study by Ruan et al. [10] is the only work investigating the potential risks of applying LLMs in power systems\" | [2025Li_RisksSG_chunk_10] |\n\nThe research indicates that understanding of LLM security in smart grid contexts \"is still nascent\" and \"lacks a comprehensive threat model and validation\" [2025Li_RisksSG_chunk_4].",
+      "enhanced_output": "# Primary Risk Factors and Threat Models for LLMs in Smart Grids\n\n| Claim / Information | Supporting Text Snippet | Chunk ID |\n|---|---|---|\n| Two main categories of risks identified | \"we categorize the main risks of LLMs for smart grid applications into bad data injection and domain knowledge extraction\" | [2025Li_RisksSG_chunk_15] |\n| Bad Data Injection Threat Model | \"Bad Data Injection: Bad data injection primarily concerns scenarios where LLMs receive input from public re-\" | [2025Li_RisksSG_chunk_15] |\n| Domain Knowledge Extraction Threat Model | \"we propose two general threat models for potential attacks on LLMs deployed in smart grids: (1) bad data injection attacks by external adversaries, and (2) domain knowledge extraction attacks by internal & external actors\" | [2025Li_RisksSG_chunk_5] |\n| Vulnerability source: Pre-trained Models | \"pre-trained LLMs, whether open-source (e.g., Meta LLaMA-3) or proprietary (e.g., OpenAI GPT-4), have pre-trained parameters that may lead to unexpected behavior in response to well-crafted inputs from attackers\" | [2025Li_RisksSG_chunk_15] |\n| Demonstrated attack capability | \"attackers are capable of injecting bad data and retrieving domain knowledge from LLMs employed in different smart grid applications\" | [2025Li_RisksSG_chunk_1] |\n\nThe research identifies that LLMs pose distinct risks compared to previous AI models, with attackers able to exploit both external attack vectors (bad data injection) and internal/external actors (domain knowledge extraction) in smart grid deployments.",
+      "baseline_abstained": false,
+      "enhanced_abstained": false,
+      "baseline_chunk_ids": [
+        "2025Li_RisksSG_chunk_4",
+        "2025Li_RisksSG_chunk_1",
+        "2025Li_RisksSG_chunk_10",
+        "2025Madani_LLMSG_chunk_9"
+      ],
+      "enhanced_chunk_ids": [
+        "2025Li_RisksSG_chunk_5",
+        "2025Li_RisksSG_chunk_15",
+        "2025Li_RisksSG_chunk_0",
+        "2025Li_RisksSG_chunk_1"
+      ],
+      "timestamp": "2026-03-01T16:14:15.954547"
+    },
+    {
+      "query_id": "E01",
+      "category": "edge_case",
+      "query": "Does the corpus contain evidence that Large Language Models can physically actuate robotic arms to replace broken transformers in active distribution networks?",
+      "status": "OK",
+      "baseline_output": "| Claim / Information | Supporting Text Snippet | Chunk ID |\n|---|---|---|\n| No evidence found | The provided context discusses LLMs and Transformers in power systems contexts, including grid management, load forecasting, and smart grid applications, but contains no information about physical actuation of robotic arms or replacement of broken transformers. | N/A |\n\n**I cannot find evidence for this claim in the provided context.**\n\nThe corpus discusses applications of Large Language Models and Transformer architectures in energy sector tasks such as electricity demand forecasting, grid management, and smart grid operations. However, there is no mention of robotic actuation, physical equipment replacement, or any capability of LLMs to physically manipulate hardware in distribution networks.",
+      "enhanced_output": "| Claim / Information | Supporting Text Snippet | Chunk ID |\n|---|---|---|\n| I cannot find evidence for this claim in the provided context. | N/A | N/A |\n\n**Explanation:** While the provided context contains references to:\n- LLM applications for transformer monitoring and maintenance (Chunk 2025Mirshekali_EnergySysReview_chunk_166)\n- Reinforcement learning for energy management in active distribution networks (Chunk 2025Yang_RL2EM_chunk_0)\n\nThere is **no evidence** in the provided context that Large Language Models can physically actuate robotic arms or perform physical replacement of broken transformers. The context discusses intelligent monitoring, fault diagnosis, and energy management optimization, but does not address physical actuation or robotic replacement capabilities.",
+      "baseline_abstained": true,
+      "enhanced_abstained": true,
+      "baseline_chunk_ids": [
+        "2025Sarwar_LitSurvey_chunk_50",
+        "2025Antonesi_Review_chunk_6",
+        "2025Antonesi_Review_chunk_183",
+        "2025Sarwar_LitSurvey_chunk_6"
+      ],
+      "enhanced_chunk_ids": [
+        "2025Mirshekali_EnergySysReview_chunk_166",
+        "2025Antonesi_Review_chunk_0",
+        "2025Yang_RL2EM_chunk_0",
+        "2025Mirshekali_EnergySysReview_chunk_22"
+      ],
+      "timestamp": "2026-03-01T16:14:27.933112"
+    },
+    {
+      "query_id": "E02",
+      "category": "edge_case",
+      "query": "What are the specific hyperparameter settings (learning rate, batch size, and dropout rate) used to train the GPT-5 model for quantum grid routing?",
+      "status": "OK",
+      "baseline_output": "I cannot find evidence for this claim in the provided context.\n\nThe provided context does not contain any information about:\n1. A GPT-5 model\n2. Quantum grid routing applications\n3. Dropout rate settings for any model training\n\nThe context only includes hyperparameter details for:\n- **EnergyGPT** (based on LLaMA 3.1-8B) trained using SFT and LoRA methods\n- **GPT-4** (gpt-4-0125-preview) used for LLM agent design in power grid applications\n\nNeither of these matches your query about GPT-5 or quantum grid routing. If you have questions about the hyperparameters documented in the provided context, I'd be happy to help with those instead.",
+      "enhanced_output": "I cannot find evidence for this claim in the provided context.\n\nThe provided context chunks contain information about:\n1. **EnergyGPT training hyperparameters** (LLaMA 3.1-8B base model) - not GPT-5\n2. **General LLM security operations** - not specific to quantum grid routing\n\nThere is no mention of:\n- A GPT-5 model\n- Quantum grid routing applications\n- Dropout rate settings for any model in the provided context\n\nTo answer your question accurately, I would need context chunks that specifically document GPT-5 model training for quantum grid routing applications.",
+      "baseline_abstained": true,
+      "enhanced_abstained": true,
+      "baseline_chunk_ids": [
+        "2026Chebbi_EnergyGPT_chunk_41",
+        "2026Chebbi_EnergyGPT_chunk_44",
+        "2026Chebbi_EnergyGPT_chunk_42",
+        "2025Ravichandran_ExpPowerGrids_chunk_68"
+      ],
+      "enhanced_chunk_ids": [
+        "2026Chebbi_EnergyGPT_chunk_41",
+        "2026Chebbi_EnergyGPT_chunk_44",
+        "2026Chebbi_EnergyGPT_chunk_42",
+        "2025Xiang_LLMSecOp_chunk_62"
+      ],
+      "timestamp": "2026-03-01T16:14:39.387052"
+    },
+    {
+      "query_id": "E03",
+      "category": "edge_case",
+      "query": "According to the corpus, how many human casualties were directly caused by LLM hallucinations in European smart grid operations in the year 2024?",
+      "status": "OK",
+      "baseline_output": "I cannot find evidence for this claim in the provided context.\n\nThe provided context chunks discuss:\n- LLM risks and attacks on smart grids (2025Li_RisksSG)\n- LLM applications for semantic data interpretation and narrative generation in smart grids (2025Madani_LLMSG)\n- Validation of bad data injection attacks using LLMs (2025Li_RisksSG)\n\nHowever, none of the context chunks contain information about:\n- Human casualties caused by LLM hallucinations\n- European smart grid operations specifically\n- Events from the year 2024\n\nThe corpus does not provide data on this topic.",
+      "enhanced_output": "I cannot find evidence for this claim in the provided context.\n\nThe provided context chunks do not contain any information about human casualties caused by LLM hallucinations in European smart grid operations in 2024 or any other year. While the context discusses hallucination risks and mitigation strategies for LLMs in energy systems, it does not report specific casualty data.",
+      "baseline_abstained": true,
+      "enhanced_abstained": true,
+      "baseline_chunk_ids": [
+        "2025Li_RisksSG_chunk_1",
+        "2025Madani_LLMSG_chunk_84",
+        "2025Madani_LLMSG_chunk_78",
+        "2025Li_RisksSG_chunk_28"
+      ],
+      "enhanced_chunk_ids": [
+        "2025Antonesi_Review_chunk_141",
+        "2026Chebbi_EnergyGPT_chunk_142",
+        "2025Mirshekali_EnergySysReview_chunk_127",
+        "2025Li_RisksSG_chunk_1"
+      ],
+      "timestamp": "2026-03-01T16:14:49.818858"
+    },
+    {
+      "query_id": "E04",
+      "category": "edge_case",
+      "query": "Does the EnergyGPT paper provide a documented C++ codebase for rewriting legacy SCADA firmwares directly?",
+      "status": "OK",
+      "baseline_output": "I cannot find evidence for this claim in the provided context.\n\nThe provided chunks from the EnergyGPT paper discuss reproducibility and release plans, including documentation of data curation, training processes, hyperparameters, and open-source frameworks used (such as NVIDIA NeMo and Megatron-LM). However, there is no mention of a C++ codebase, SCADA firmware rewriting, or legacy firmware modification capabilities in the available context.\n\nThe closest reference to implementation details is:\n\n| Claim / Information | Supporting Text Snippet | Chunk ID |\n|---|---|---|\n| EnergyGPT reproducibility focuses on data and training documentation | \"we document the full data curation and training process in detail, including parameter settings for data preprocessing, quality filtering, deduplication, and semantic selection, as well as the hyperparameters and optimization configurations used for supervised fine-tuning and LoRA training\" | [2026Chebbi_EnergyGPT_chunk_97] |",
+      "enhanced_output": "I cannot find evidence for this claim in the provided context.\n\nThe provided context chunks discuss EnergyGPT's reproducibility and release plan, mentioning documentation of data curation, training processes, and links to open-source tools and frameworks (such as NVIDIA NeMo, Megatron-LM, and LLaMA 3.1-8B). However, there is no mention of a C++ codebase, SCADA firmware rewriting, or legacy firmware modification capabilities in any of the provided chunks.",
+      "baseline_abstained": true,
+      "enhanced_abstained": true,
+      "baseline_chunk_ids": [
+        "2025Madani_LLMSG_chunk_21",
+        "2026Chebbi_EnergyGPT_chunk_95",
+        "2026Chebbi_EnergyGPT_chunk_97",
+        "2026Chebbi_EnergyGPT_chunk_78"
+      ],
+      "enhanced_chunk_ids": [
+        "2026Chebbi_EnergyGPT_chunk_97",
+        "2026Chebbi_EnergyGPT_chunk_96",
+        "2026Chebbi_EnergyGPT_chunk_10",
+        "2026Chebbi_EnergyGPT_chunk_92"
+      ],
+      "timestamp": "2026-03-01T16:15:01.726166"
+    },
+    {
+      "query_id": "E05",
+      "category": "edge_case",
+      "query": "According to the provided texts, what is the exact financial cost in USD of deploying GAIA across the entire Texas ERCOT power grid?",
+      "status": "OK",
+      "baseline_output": "I cannot find evidence for this claim in the provided context.\n\nThe provided chunks discuss GAIA's performance characteristics, training data composition, and comparative evaluation against other LLMs, but they contain no information about:\n- Financial costs or pricing for GAIA deployment\n- Specific deployment scenarios (such as Texas ERCOT)\n- Infrastructure or implementation expenses in USD\n\nTo answer your question, I would need context that explicitly addresses deployment costs for GAIA in specific power grid systems.",
+      "enhanced_output": "I cannot find evidence for this claim in the provided context.\n\nThe provided chunks discuss GAIA's training data composition, fine-tuning methods, and general performance capabilities, but they contain no information about:\n- Financial costs or pricing for GAIA deployment\n- Specific deployment to Texas ERCOT or any other grid\n- USD costs or budget figures for implementation\n\nTo answer your question, I would need context that explicitly addresses deployment costs and ERCOT-specific implementation details.",
+      "baseline_abstained": true,
+      "enhanced_abstained": true,
+      "baseline_chunk_ids": [
+        "2024Cheng_GAIA_chunk_59",
+        "2024Cheng_GAIA_chunk_62",
+        "2024Cheng_GAIA_chunk_64",
+        "2024Cheng_GAIA_chunk_61"
+      ],
+      "enhanced_chunk_ids": [
+        "2024Cheng_GAIA_chunk_62",
+        "2024Cheng_GAIA_chunk_56",
+        "2024Cheng_GAIA_chunk_59",
+        "2024Cheng_GAIA_chunk_74"
+      ],
+      "timestamp": "2026-03-01T16:15:12.067184"
+    }
+  ]
+}
