@@ -299,7 +299,7 @@ def export_csv(query, answer, chunks_info):
 # ============================================================================
 def page_search():
     st.title("🔍 Search & Ask")
-    st.caption("Ask a research question. Every claim is cited. Enhanced pipeline uses 4 enhancements.")
+    st.caption("Ask a research question. Every claim is precise, traceable, and cited. Full transparency is ensured.")
 
     # --- Query form ---
     with st.form("query_form"):
