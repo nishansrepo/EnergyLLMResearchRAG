@@ -55,8 +55,8 @@ A research-grade Retrieval-Augmented Generation (RAG) system for academic papers
 
 Runs two parallel pipelines per query for A/B comparison:
 
-- **Baseline:** Pure FAISS cosine-similarity, top-4 chunks.
-- **Enhanced:** Three stacked enhancements (see below), final top-4 chunks.
+- **Baseline:** Pure FAISS cosine-similarity, top-6 chunks.
+- **Enhanced:** Three stacked enhancements (see below), final top-6 chunks.
 
 Both pipelines feed into the same citation-enforcing prompt for generation.
 
@@ -166,7 +166,7 @@ The system implements three trust guardrails:
 
 ```bash
 git clone <repo-url> && cd repo
-cp .env.example .env          # ← add your ANTHROPIC_API_KEY
+echo "ANTHROPIC_API_KEY=sk-ant-api03-your-key-here" > .env          # ← add your ANTHROPIC_API_KEY
 make install                   # pip install -r requirements.txt
 ```
 
@@ -294,4 +294,4 @@ repo/
 
 ## Authors
 
-Farrukh Masood · Nishan Sah — Carnegie Mellon University, Policy Innovation Lab
+Farrukh Masood · Nishan Sah — Carnegie Mellon University
